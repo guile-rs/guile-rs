@@ -1,34 +1,31 @@
-# guile-rs
+guile-rs
+========
 
 Safe Rust bindings to [GNU Guile][gnu_guile].
 
-## Status
+## Current status
 
-I took the maintainer role of this project back in 2017.
+So, I took on maintainership of this project from its previous maintainer, David
+Li.
 
-I've been working on trying to get the library in better shape, as I
-wish to use it in my text editor as an embedded scripting/
-configuration language.
+Since then, things have stalled, but people still seem interested. I noted
+several implementations of Rust Guile bindings, including a fairly complete one
+on GitLab.
 
-However, it has proven to be rather.. tricky. GNU Guile has a really
-_weird_ way of exposing its API. I have yet to cleanly bind to it.
+In the next few weeks, I intend to reach out to all these maintainers of the
+bindings, and make a proposal to unify it all into this `guile-rs` GitHub
+organisation (it'll be mirrored to GitLab, but primarily developed on GitHub),
+so that we can progress faster and unify effort into one single project.
 
-I've put it on hold from my side for now, but if anyone has any
-thoughts on improvements -- do let me know! I want this crate to
-succeed, its just tricky with such a complex project such as Guile..
+I did put it on hold for a while, but I now have a better understanding of Rust. 
 
-There are other attempts to bring Guile into the Rust ecosystem, and
-it would be great to unify these attempts into one implementation.
-
-## Community
-
-The IRC channel is no more, as Mozilla switched to Matrix.
-
-I am looking into a different way to communicate, possibly Zulip.
+I'm really keen to develop a community and developer foundation for Rust and
+Guile support, and further to that end, a Code of Conduct and Matrix/IRC
+channels will be arranged soon.
 
 ## License
 
-Licensing information about `guile-rs` is available [here][license]
+The license for this particular set of GNU Guile Rust bindings is
+[here](/LICENSE)
 
 [gnu_guile]: https://www.gnu.org/software/guile/
-[license]: /LICENSE
