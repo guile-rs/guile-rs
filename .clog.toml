@@ -1,8 +1,5 @@
 [clog]
-repository = "https://github.com/lidavidm/guile-rs"
-
+repository = "https://github.com/guile-rs/guile-rs"
 link-style = "github"
-
 changelog = "CHANGELOG.md"
-
 from-latest-tag = true

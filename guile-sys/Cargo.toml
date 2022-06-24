@@ -14,7 +14,7 @@ name = "guile_sys"
 path = "src/lib.rs"
 
 [dependencies]
-libc = "0.2.71"
+libc = "0.2.126"
 
 [build-dependencies]
-bindgen = "0.54.0"
+bindgen = "0.60.1"

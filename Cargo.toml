@@ -12,4 +12,3 @@ libc = "0.2.126"
 
 [dependencies.guile-sys]
 path = "guile-sys"
-

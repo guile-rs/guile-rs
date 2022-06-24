@@ -1,11 +1,11 @@
 /* Credit where credit's due:
- * This build.rs is derived from: https://github.com/ysimonson/guile-sys
- * Thanks to Yusuf Simonson for his work on the build script, without
- * this, we cannot create bindings with ease! */
+ * This build.rs is derived from: https://github.com/ysimonson/guile-sys.
+ * Thanks to Yusuf Simonson for his work on the build script we use.
+ * Makes things much, much easier... */
 
 extern crate bindgen;
 
-use std::env;
+use std::env::var;
 use std::path::PathBuf;
 use std::process::Command;
 use std::str;
@@ -21,7 +21,7 @@ fn config_args(cmd: &str) -> Vec<String> {
         .stdout;
     str::from_utf8(&out)
         .expect(&format!(
-            "Could not decode `guile-config {}` output as utf-8",
+            "Could not decode `guile-config {}` output as UTF-8, bailing",
             cmd
         ))
         .trim()
@@ -79,7 +79,7 @@ fn main() {
     /* WARNING: Possibly subject to change! */
     /* HERE BE DRAGONS! */
     let bindings_out_path =
-        PathBuf::from(env::var("CARGO_MANIFEST_DIR").unwrap()).join("src/bindings.rs");
+        PathBuf::from(var("CARGO_MANIFEST_DIR").unwrap()).join("src/bindings.rs");
 
     bindings.write_to_file(bindings_out_path).unwrap()
 }
