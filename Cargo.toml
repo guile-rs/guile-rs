@@ -8,7 +8,7 @@ repository = "https://github.com/shymega/guile-rs"
 license = "GPL-3.0"
 
 [dependencies]
-libc = "0.2.126"
+libc = "0.2.152"
 
 [dependencies.guile-sys]
 path = "guile-sys"
