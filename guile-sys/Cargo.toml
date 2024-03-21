@@ -8,13 +8,14 @@ repository = "https://github.com/shymega/guile-rs"
 license = "GPL-3.0"
 links = "guile"
 build = "build.rs"
+edition = "2021"
 
 [lib]
 name = "guile_sys"
 path = "src/lib.rs"
 
 [dependencies]
-libc = "0.2.126"
+libc = "0.2"
 
 [build-dependencies]
-bindgen = "0.60.1"
+bindgen = "0.69.1"
