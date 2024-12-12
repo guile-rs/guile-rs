@@ -9,7 +9,7 @@ license = "GPL-3.0"
 edition = "2021"
 
 [dependencies]
-libc = "0.2.167"
+libc = "0.2.168"
 
 [dependencies.guile-sys]
 path = "guile-sys"
