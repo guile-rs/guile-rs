@@ -5,5 +5,4 @@
     improper_ctypes
 )]
 
-mod bindings;
-pub use bindings::*;
+include!(concat!(env!("OUT_DIR"), "/libguile.rs"));
