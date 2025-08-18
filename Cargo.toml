@@ -5,7 +5,7 @@ authors = ["David Li <li.davidm96@gmail.com>",
            "Dom Rodriguez <shymega@shymega.org.uk"]
 description = "Safe bindings to GNU Guile."
 repository = "https://github.com/shymega/guile-rs"
-license = "GPL-3.0"
+license = "LGPL-3.0"
 edition = "2021"
 
 [dependencies]
