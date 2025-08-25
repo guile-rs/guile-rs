@@ -16,10 +16,8 @@
 // License along with guile-rs.  If not, see
 // <http://www.gnu.org/licenses/>.
 extern crate guile_sys;
-extern crate libc;
 
-use libc::{c_char, c_void};
-use std::ffi;
+use std::ffi::{self, c_char, c_void};
 
 pub struct GuileVM {}
 
