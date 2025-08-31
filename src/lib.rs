@@ -15,8 +15,11 @@
 // You should have received a copy of the GNU Lesser General Public
 // License along with guile-rs.  If not, see
 // <http://www.gnu.org/licenses/>.
+
 extern crate guile_sys;
 extern crate libc;
+
+pub mod dynwind;
 
 use libc::{c_char, c_void};
 use std::ffi;
