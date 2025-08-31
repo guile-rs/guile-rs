@@ -64,24 +64,11 @@ impl<'vm> Dynwind<'vm> {
     ///     vm.dynwind_scope(|dynwind| {
     ///         let mut pointee = Vec::<i32>::new();
     ///         let ptr = Pin::new(&mut pointee);
-    ///         // SAFETY: `pointee` has the same lifetime as the scope
-    ///         unsafe { dynwind.protect_unchecked(ptr); }
+    ///         dynwind.protect(ptr);
     ///     });
     /// });
     /// ```
-    ///
-    /// ```no_run
-    /// # use std::pin::Pin;
-    /// guile::init(|vm| {
-    ///     let mut pointee = Vec::<i32>::new();
-    ///     let ptr = Pin::new(&mut pointee);
-    ///     vm.dynwind_scope(|dynwind| {
-    ///         // very unsafe
-    ///         unsafe { dynwind.protect_unchecked(ptr); }
-    ///     });
-    /// });
-    /// ```
-    pub unsafe fn protect_unchecked<T>(&mut self, ptr: Pin<&mut T>) {
+    pub fn protect<T>(&mut self, ptr: Pin<&mut T>) {
         unsafe {
             scm_dynwind_unwind_handler(
                 // SAFETY: `ptr` is a reference of type `T`
@@ -148,7 +135,7 @@ impl GuileVM {
     ///     vm.dynwind_scope(|dynwind| {
     ///         let mut guard = SetTrue;
     ///         let guard = Pin::new(&mut guard);
-    ///         unsafe { dynwind.protect_unchecked(guard); }
+    ///         dynwind.protect(guard);
     ///         unwind(&vm);
     ///     });
     /// });
