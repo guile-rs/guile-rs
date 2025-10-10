@@ -74,7 +74,6 @@ name = "guile"
 version = "0.0.3"
 dependencies = [
  "guile-sys",
- "libc",
 ]
 
 [[package]]
@@ -82,7 +81,6 @@ name = "guile-sys"
 version = "0.1.1"
 dependencies = [
  "bindgen",
- "libc",
 ]
 
 [[package]]
