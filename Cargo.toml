@@ -8,11 +8,11 @@ repository = "https://github.com/shymega/guile-rs"
 license = "GPL-3.0"
 edition = "2021"
 
-[lib]
-crate-type = ["rlib"]
+[features]
+dynamic = ["guile-sys/dynamic"]
 
-[target.'cfg(feature = "dynamic")'.lib]
-crate-type = ["cdylib"]  # 动态库模式
+[lib]
+crate-type = ["cdylib","rlib"]
 
 [dependencies]
 
