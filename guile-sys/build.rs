@@ -29,6 +29,10 @@ where
 }
 
 fn main() {
+
+    #[cfg(feature = "dynamic")]
+    println!("cargo:rustc-link-arg=-Wl,--export-dynamic");
+    
     let mut stdout = stdout().lock();
     let linker_args = config_output("link");
     linker_args

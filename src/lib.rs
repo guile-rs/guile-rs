@@ -15,7 +15,7 @@
 // You should have received a copy of the GNU Lesser General Public
 // License along with guile-rs.  If not, see
 // <http://www.gnu.org/licenses/>.
-extern crate guile_sys;
+pub use guile_sys;
 
 use std::ffi::{self, c_char, c_void};
 
@@ -31,6 +31,7 @@ where
             &func as *const _ as *mut c_void,
         );
     }
+    
 }
 
 impl GuileVM {
