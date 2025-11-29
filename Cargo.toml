@@ -8,6 +8,9 @@ repository = "https://github.com/shymega/guile-rs"
 license = "GPL-3.0"
 edition = "2021"
 
+[lib]
+crate-type = ["cdylib", "rlib"]
+
 [dependencies]
 
 [dependencies.guile-sys]
