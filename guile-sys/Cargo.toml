@@ -10,6 +10,9 @@ links = "guile"
 build = "build.rs"
 edition = "2021"
 
+[features]
+dynamic = []
+
 [lib]
 name = "guile_sys"
 path = "src/lib.rs"
